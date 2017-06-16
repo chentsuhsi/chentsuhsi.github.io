@@ -1,0 +1,298 @@
+body,
+html {
+  height: 100%;
+  background-color: #888;
+  padding-top: 40px;
+}
+
+div, .nopad{
+  padding: 0;
+  margin: 0;  
+}
+
+.myhr {
+  height:3px;
+  border:none;
+  color:#fff;
+  background-color:#fff;  
+}
+.navbar-offset {
+    top: 0px; /*Offsets the top navbar 37px from the top of the viewport*/
+}
+.container-fluid.scrollable {
+  height: 100%; /*Sets the scrollable area to 100% of the viewport*/
+  overflow: auto; /*Allows the scrollable area to have a scrollbar based on the height of its content*/
+}
+
+.viewport{
+  height: 100px;
+  padding: 0;
+  margin:0;
+  background-color: #aaa;
+}
+
+#mainnav img{
+  height:50px;
+  margin:0;
+  padding:0;
+}
+
+#one > div > a:hover, a:focus, a:visited, a:link {
+  text-decoration: none;
+  color: cornflowerblue; 
+}
+
+.mycontent {
+  background-color: #aaa;
+  float: center;
+  width: 100%;
+  color: #aaa;
+  padding: 0, 20%, 0, 20%;
+}
+
+h2 {
+ text-transform: uppercase;
+ text-align: center;
+ font-weight: bold !important;
+ letter-spacing: 3px;
+}
+
+#home { 
+  background-color: #555;
+  font-size: 20px;
+  padding: 20px;
+}
+
+#contact {
+  background-color: #888;
+  color: #000 !important;
+  font-size: 20px;
+}
+
+#one {
+  color: #000 !important;
+  padding: 20px, 20px, 0px, 20px;
+}
+
+.navbutton {}
+
+.navone {
+    width: 100%;
+    height: 80px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #000000;
+    color: #fff;
+    overflow: hidden;
+    margin: 0;
+}
+
+.navone > ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navone > li {
+    list-style-type: none;
+    display: inline-block;
+    width: 200px;
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:4px;    
+    padding: 15px;
+    margin: 0;
+}
+
+.navone > li > a {
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background: #000;
+}
+
+.navone > li > a:hover {
+    color: #fff;
+    background: #222;
+    outline: none;   
+}
+
+.navone .active {
+    background-color: cornflowerblue;
+}
+
+.navone #logo {
+    list-style-type: none;
+    padding: 0 0;  
+    background-color: #000;
+}
+
+.navone #logo > a:hover {
+    color: #fff;
+    background: #000;
+    outline: none;   
+}
+
+.mysection{
+  background-color: #aaa;
+  width: 100%;
+  padding: 0px 20% 0px 20%;
+  border: none;
+}
+.myimage {
+    padding: 0px 0px 0px 0px;
+    border-style: solid;
+    border-radius: 50%;
+}
+
+#contact-form {
+  padding: 20px;
+  margin: 20px auto;
+}
+
+#contact-form textarea {
+    height: 200px;
+}
+
+#contact-form label {
+    display: block;
+}
+
+#contact-form input {
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid #555;  
+}
+
+#contact-form input,
+#contact-form textarea {
+  min-width: 100%;  
+  max-width: 100%;
+  font-size: 1.15em !important;
+  margin-bottom: 5px;
+}
+
+.navtwo {
+    height: 80px;
+    display: none;
+}
+
+@media (max-width:1100px) {}
+
+@media (max-width:768px) {
+  .mysection{
+    padding: 0;
+  }
+}
+
+@media (max-width:480px) {
+    img {
+        width: 100%;
+    }
+    .navone {
+        display: none;
+    }
+    .navtwo {
+        display: block;
+        width: 100%;
+        height: 50px;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background: #000000;
+        color: #fff;
+        overflow: hidden;
+        margin: 0;
+    }
+    .navtwo > li {
+        width: 15%;
+        list-style-type: none;
+        display: inline-block;
+    }
+    .navtwo > li > a {
+        display: block;
+        padding: 15px 0;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        background: #222;
+        color: aliceblue;
+    }
+    .navtwo > li > a:hover {
+        background: blue;
+        outline: none;
+    }
+    .navtwo .active {
+        background-color: cornflowerblue;
+    }
+    #contact-form input,
+    #contact-form textarea {
+      min-width : 100%;
+      max-width : 100%;
+    }
+}
+
+#mainnav img{
+  height:50px;
+  margin:0;
+  padding:0;
+}
+
+.slot {
+ background-color: silver;
+ text-align: center; 
+}
+
+#one a {
+  color: #333; 
+}
+
+#one a:visited 
+  {
+    text-decoration: none;
+    color: #555;   
+}
+
+#one a:hover, a:focus, a:link
+  {
+    text-decoration: none;
+    color: #000;
+}
+
+#contact a {
+  color: #333; 
+}
+
+#contact a:visited 
+  {
+    text-decoration: none;
+    color: #555;   
+}
+
+
+#contact a:hover
+  {
+    text-decoration: none;
+    color: navy;
+}
+
+#btn-linkedin a:hover
+  {
+    text-decoration: none;
+    color: #0074b5;
+}
+
+#btn-github a:hover
+  {
+    text-decoration: none;
+    color: #000000;
+}
+
+#btn-facebook a:hover
+  {
+    text-decoration: none;
+    color: #3b5998;
+}
