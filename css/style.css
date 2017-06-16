@@ -1,5 +1,5 @@
 body, html {
-  min-width: 30px;
+  min-width: 320;
   height: 100%;
   background-color: #333333;
   padding-top: 25px;
@@ -60,7 +60,7 @@ footer {
 
 .myimage {
   width: 50%;
-  padding: 0;
+  padding: 0px;
 }
 
 .myhr {
@@ -130,20 +130,19 @@ h2 {
 
 @media (max-width:990px) {
   .mysection {
-      padding: 0 10% 0 10%;
-  }
+    padding: 0 10% 0 10%;    
+  }  
 }
 
 @media (max-width:768px) {
-    .mysection {
-        padding: 0 10% 0 10%;
-    }
+  .mysection {
+    padding: 0 10% 0 10%;    
+  }  
 }
 
 @media (max-width:480px) {
   .mysection {
-    padding: 0;
-
+    padding: 0;    
   }  
     #contact-form input,
     #contact-form textarea {
@@ -173,8 +172,7 @@ h2 {
 #contact {
   border: solid #333333 1px;
   box-shadow: 5px 5px 5px grey;  
-  background-color: #aaaaaa;
-  color: #ffffff ;
+  background-color: #aaaaaa;   color: #ffffff ;
   padding: 30px;
   font-family: calibri;
   font-size: 22px;
