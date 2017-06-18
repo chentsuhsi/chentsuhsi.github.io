@@ -1,0 +1,44 @@
+body, html {
+    min-width: 320;
+    height: 100%;
+    background-color: #777777;
+    color: #ffffff;
+    padding-top: 0;
+    margin: 0;
+    font-family: Verdana, Arial;
+}
+
+footer {
+  background-color: #000000;  
+  font-size: 16px;
+  color: #ffffff;
+}
+.navbar-offset {
+   top: 25px; /*Offsets the top navbar 37px from the top of the viewport*/
+}
+
+.navbar-header{
+  height: 40px;
+  margin: 0;
+}
+
+.navbar-brand {
+  width: 60px;
+  margin: 0;
+}
+
+.container-fluid.scrollable {
+  height: 100%; /*Sets the scrollable area to 100% of the viewport*/
+  overflow: auto; /*Allows the scrollable area to have a scrollbar based on the height of its content*/
+  margin: 0;
+}
+
+@media (max-width:990px) {
+}
+
+@media (max-width:768px) {
+}
+
+@media (max-width:480px) {
+}
+
