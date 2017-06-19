@@ -13,9 +13,9 @@ $(document).ready(function() {
                 quoteTxt = data.quoteText;
 
                 html += '<div class="quote-txt">' +
-                        '    <span class="fa fa-quote-left fa-2x" aria-hidden="true"></span>'+
+                        '    <span class="fa fa-quote-left " aria-hidden="true"></span>'+
                          quoteTxt +
-                         '<span class="fa fa-quote-right fa-2x" aria-hidden="true"></span>'+
+                         '<span class="fa fa-quote-right " aria-hidden="true"></span>'+
                          '</div>';
                 html += '<div class="quote-author">' + quoteAuthor + '</div>';
 
