@@ -5,7 +5,7 @@
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
-<!--    <script src="script.js"></script> -->
+    <script src="script.js"></script>
 
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -14,40 +14,6 @@
 
 </head>
 <body>
-<script>
-    var url = "http://api.forismatic.com/api/1.0/";
-    $(document).ready(function() {
-        $("#getMessage").on("click", function(){
-            // Only change code below this line.
-            $.ajax({
-                headers: {
-                    Accept: "application/json",
-                    "Content-Type": "application/x-www-form-urlencoded",
-                    "Access-Control-Allow-Headers": "*"
-                },
-                url: url,
-                method: "GET",
-                crossDomain: true,
-                data: {
-                    method: "getQuote",
-                    key: "457653",
-                    format: "json",
-                    lang: "en"
-                },
-                dataType: "json",
-                success: function (json) {
-                    $(".message").html(JSON.stringify(json))
-                }
-                }
-            );
-
-            $(".message").html(JSON.stringify(json));
-            // Only change code above this line.
-        });
-
-    });
-</script>
-
     <!-- ======================================================================= -->
     <!-- NavBar -->
     <div class="navbar navbar-inverse navbar-fixed-top">
