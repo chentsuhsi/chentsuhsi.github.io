@@ -8,16 +8,16 @@ $(document).ready(function() {
             "http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?",
             function (data) {
                 var html = "";
-                data = JSON.parse(data);
+                if (typeof r === 'string') { data = JSON.parse(data) };
                 quoteAuthor = data.quoteAuthor;
                 quoteTxt = data.quoteText;
 
-                html += '<div class="quote-text">' +
-                        '    <i class="fa fa-quote-left" aria-hidden="true"></i>'+
+                html += '<div class="quote-txt">' +
+                        '    <span class="fa fa-quote-left fa-2x" aria-hidden="true"></span>'+
                          quoteTxt +
-                         '<i class="fa fa-quote-right" aria-hidden="true"></i>'+
+                         '<span class="fa fa-quote-right fa-2x" aria-hidden="true"></span>'+
                          '</div>';
-                html += '<div class="quote-author">' + quoteTxt + '</div>';
+                html += '<div class="quote-author">' + quoteAuthor + '</div>';
 
                 $(".quote").html(html);
             }

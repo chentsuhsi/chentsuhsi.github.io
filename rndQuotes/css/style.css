@@ -47,14 +47,15 @@ footer {
 }
 
 .quote-txt {
-    font-size: x-large;
-    background-color: cornflowerblue;
+    font-size: 60px;
+    font-family: "Lucida Handwriting", Calibri, Arial;
+    background-color: #888888;
     color: #111111;
     text-align: justify;
 }
 
-.quote-txt {
-    font-size: small;
+.quote-author {
+    font-size: 16px;
     background-color: #aaaaaa;
     color: inherit;
     text-align: right;
