@@ -8,6 +8,10 @@ body, html {
     font-family: Verdana, Arial;
 }
 
+body {
+    padding-top: 60px;
+}
+
 footer {
   background-color: #000000;  
   font-size: 16px;
@@ -18,7 +22,7 @@ footer {
 }
 
 .navbar-header{
-  height: 40px;
+  height: 60px;
   margin: 0;
 }
 

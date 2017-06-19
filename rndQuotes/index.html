@@ -5,13 +5,49 @@
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
-    <script src="script.js"></script>
+<!--    <script src="script.js"></script> -->
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="css/style.css">
+
+
 </head>
 <body>
+<script>
+    var url = "http://api.forismatic.com/api/1.0/";
+    $(document).ready(function() {
+        $("#getMessage").on("click", function(){
+            // Only change code below this line.
+            $.ajax({
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/x-www-form-urlencoded",
+                    "Access-Control-Allow-Headers": "*"
+                },
+                url: url,
+                method: "GET",
+                crossDomain: true,
+                data: {
+                    method: "getQuote",
+                    key: "457653",
+                    format: "json",
+                    lang: "en"
+                },
+                dataType: "json",
+                success: function (json) {
+                    $(".message").html(JSON.stringify(json))
+                }
+                }
+            );
+
+            $(".message").html(JSON.stringify(json));
+            // Only change code above this line.
+        });
+
+    });
+</script>
+
     <!-- ======================================================================= -->
     <!-- NavBar -->
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -22,23 +58,44 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#" style="padding: 5px 15px">
+                <a class="navbar-brand" href="#" style="padding: 15px 15px">
                     <img class="img-responsive img-circle" style="display: inline-block"
-                         src="/imgs/easyApp.BR.png" alt="" width="40"/>
+                         src="imgs/easyApp.BR.png" alt="" width="80"/>
                 </a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="fa fa-envelope"></span> Contact</a></li>
-                    <li><a href="#"><span class="fa fa-info"></span> About</a></li>
+                    <li>
+                        <a href="http://www.linkedin.com" role="button" target="_blank">
+                            <span class="fa fa-linkedin-square fa-2x" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.github.io/chentsuhsi" role="button" target="_blank">
+                            <span class="fa fa-github fa-2x" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="http://www.facebook.com/tsuhsi.chen" role="button" target="_blank">
+                            <span class="fa fa-facebook-official fa-2x" aria-hidden="false"></span>
+                        </a>
+                    </li>
+                    <li><a href="#"><span class="fa fa-envelope fa-2x"></span></a></li>
+                    <li><a href="#"><span class="fa fa-info fa-2x"></span></a></li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid scrollable  navbar-offset">
-        <a href="#about"></a>
-        <h2>About</h2>
+    <button class = "btn btn-primary" id="getMessage"> Get Button</button>
+
+    <div class="container-fluid scrollable navbar-offset">
+        Segue abaixo:
+        <br/>
+        <div class="message" id="info">
+            Aqui vem o texto.
+        </div>
+
     </div>
 
     <footer class="navbar navbar-inverse navbar-fixed-bottom" >
