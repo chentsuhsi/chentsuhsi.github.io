@@ -14,10 +14,13 @@ $(document).ready(function() {
 
                 html += '<div class="quote-txt">' +
                         '    <span class="fa fa-quote-left " aria-hidden="true"></span>'+
-                         quoteTxt +
-                         '<span class="fa fa-quote-right " aria-hidden="true"></span>'+
-                         '</div>';
-                html += '<div class="quote-author">' + quoteAuthor + '</div>';
+                             quoteTxt +
+                        '    <span class="fa fa-quote-right " aria-hidden="true"></span>'+
+                        '</div>';
+
+                html += '<div class="quote-author">';
+                html +=     quoteAuthor;
+                html += '</div>';
 
                 $(".quote").html(html);
             }
