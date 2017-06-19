@@ -46,3 +46,16 @@ footer {
 @media (max-width:480px) {
 }
 
+.quote-txt {
+    font-size: x-large;
+    background-color: cornflowerblue;
+    color: #111111;
+    text-align: justify;
+}
+
+.quote-txt {
+    font-size: small;
+    background-color: #aaaaaa;
+    color: inherit;
+    text-align: right;
+}
