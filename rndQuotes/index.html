@@ -5,7 +5,7 @@
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
-    <script src="scripts/script.js"></script>
+<!--    <script src="scripts/script.js"></script> -->
 
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -66,6 +66,41 @@
             <p class="col-xs-12" >easyApps.BR © <script>document.write(new Date().getFullYear())</script>. All Lefts Donated.</p>
         </div>
     </footer>
+
+<script>
+
+    var url = "http://api.forismatic.com/api/1.0/";
+    var quoteTxt = "";
+    var quoteAuthor = "";
+    function getQuote() {
+        $.getJSON(
+            "http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?",
+            function (data) {
+                var html = "";
+                if (typeof r === 'string') { data = JSON.parse(data) };
+                quoteAuthor = data.quoteAuthor;
+                quoteTxt = data.quoteText;
+
+                html += '<div class="quote-txt">' +
+                    '    <span class="fa fa-quote-left " aria-hidden="true"></span>'+
+                    quoteTxt +
+                    '    <span class="fa fa-quote-right " aria-hidden="true"></span>'+
+                    '</div>';
+
+                html += '<div class="quote-author">';
+                html +=     quoteAuthor;
+                html += '</div>';
+
+                $(".quote").html(html);
+            }
+        )
+    };
+
+    $(document).ready(function() {
+        $('#getQuote').on('click', getQuote);
+        getQuote();
+    });
+</script>
 
 </body>
 </html>
